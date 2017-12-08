@@ -7,48 +7,13 @@ package com.csu.bookstore.domain;
  */
 public class Product {
     
-    /**
-     * 商品编号
-     */
-    private String name;
-    
-    /**
-     * 名称
-     */
-    private double price;
-    
-    /**
-     * 价格
-     */
-    private String category;
-    
-    /**
-     * 分类
-     */
-    private int pnum;
-    
-    /**
-     * 数量
-     */
-    private String img_url;
-    
-    /**
-     * 图片路径
-     */
-    private String description;
-    
-    /**
-     * 描述
-     */
-    private String id;
-    
-    public String getId() {
-        return id;
-    }
-    
-    public void setId(String id) {
-        this.id = id;
-    }
+    private String name;    //商品编号
+    private double price;    //名称
+    private String category;    //价格
+    private int pnum;    //分类
+    private String imgurl;    //数量
+    private String description;    //图片路径
+    private String id;    //描述
     
     public String getName() {
         return name;
@@ -82,12 +47,12 @@ public class Product {
         this.pnum = pnum;
     }
     
-    public String getImg_url() {
-        return img_url;
+    public String getImgurl() {
+        return imgurl;
     }
     
-    public void setImg_url(String img_url) {
-        this.img_url = img_url;
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
     }
     
     public String getDescription() {
@@ -96,5 +61,13 @@ public class Product {
     
     public void setDescription(String description) {
         this.description = description;
+    }
+    
+    public String getId() {
+        return id;
+    }
+    
+    public void setId(String id) {
+        this.id = id;
     }
 }

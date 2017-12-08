@@ -7,6 +7,8 @@ import com.csu.bookstore.exception.UserException;
 import java.sql.SQLException;
 
 /**
+ * 业务层
+ * 用户相关操作
  * @author sharp on 2017/12/1 0001 - 23:47
  */
 public class UserService {
@@ -15,7 +17,7 @@ public class UserService {
     /**
      * 注册用户
      *
-     * @param user
+     * @param user 需要注册的用户信息
      */
     public void register(User user) throws UserException {
         try {

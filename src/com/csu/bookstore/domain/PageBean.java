@@ -8,35 +8,12 @@ import java.util.List;
  */
 public class PageBean {
     
-    /**
-     * 当前页码
-     */
-    private int totalCount;
-    
-    /**
-     * 总条数
-     */
-    private int totalPage;
-    
-    /**
-     * 总页数
-     */
-    private int currentCount;
-    
-    /**
-     * 每页条数
-     */
-    private List<Product> ps;
-    
-    /**
-     * 每页显示的数据
-     */
-    private String category;
-    
-    /**
-     * 分类
-     */
-    private int currentPage;
+    private int totalCount;  //当前页码
+    private int totalPage;  //总条数
+    private int currentCount;  //总页数
+    private List<Product> ps;  //每页条数
+    private String category;  //每页显示的数据
+    private int currentPage;  //分类
     
     public int getCurrentPage() {
         return currentPage;

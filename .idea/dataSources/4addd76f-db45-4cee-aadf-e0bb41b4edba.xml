@@ -12,57 +12,233 @@
     <schema id="6" parent="1" name="sakila"/>
     <schema id="7" parent="1" name="sys"/>
     <schema id="8" parent="1" name="world"/>
-    <table id="9" parent="2" name="user"/>
-    <column id="10" parent="9" name="id">
+    <table id="9" parent="2" name="orderitem"/>
+    <table id="10" parent="2" name="orders"/>
+    <table id="11" parent="2" name="products"/>
+    <table id="12" parent="2" name="user"/>
+    <table id="13" parent="2" name="user2"/>
+    <column id="14" parent="9" name="order_id">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="9" name="product_id">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="9" name="buynum">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="17" parent="9" name="product_id">
+      <ColNames>product_id</ColNames>
+    </index>
+    <key id="18" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>order_id
+product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="19" parent="9" name="orderitem_ibfk_1">
+      <ColNames>order_id</ColNames>
+      <RefSchemaName>book_store</RefSchemaName>
+      <RefTableName>orders</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="20" parent="9" name="orderitem_ibfk_2">
+      <ColNames>product_id</ColNames>
+      <RefSchemaName>book_store</RefSchemaName>
+      <RefTableName>products</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="21" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="10" name="money">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="23" parent="10" name="receiverAddress">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="24" parent="10" name="receiverName">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="25" parent="10" name="receiverPhone">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="26" parent="10" name="paystate">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="27" parent="10" name="ordertime">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="28" parent="10" name="user_id">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="29" parent="10" name="user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="30" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="31" parent="10" name="orders_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>book_store</RefSchemaName>
+      <RefTableName>user2</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="32" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="11" name="name">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="34" parent="11" name="price">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="35" parent="11" name="category">
+      <Position>4</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="36" parent="11" name="pnum">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="37" parent="11" name="imgurl">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="38" parent="11" name="description">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="39" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="12" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="11" parent="9" name="username">
+    <column id="41" parent="12" name="username">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="12" parent="9" name="password">
+    <column id="42" parent="12" name="PASSWORD">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="13" parent="9" name="gender">
+    <column id="43" parent="12" name="gender">
       <Position>4</Position>
       <DataType>varchar(10)|0</DataType>
     </column>
-    <column id="14" parent="9" name="email">
+    <column id="44" parent="12" name="email">
       <Position>5</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="15" parent="9" name="telephone">
+    <column id="45" parent="12" name="telephone">
       <Position>6</Position>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="16" parent="9" name="introduce">
+    <column id="46" parent="12" name="introduce">
       <Position>7</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="17" parent="9" name="activeCode">
+    <column id="47" parent="12" name="activeCode">
       <Position>8</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="18" parent="9" name="state">
+    <column id="48" parent="12" name="state">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="19" parent="9" name="role">
+    <column id="49" parent="12" name="role">
       <Position>10</Position>
       <DataType>varchar(10)|0</DataType>
       <DefaultExpression>&apos;普通用户&apos;</DefaultExpression>
     </column>
-    <column id="20" parent="9" name="registTime">
+    <column id="50" parent="12" name="registTime">
       <Position>11</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="21" parent="9" name="PRIMARY">
+    <key id="51" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="53" parent="13" name="username">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="54" parent="13" name="password">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="55" parent="13" name="gender">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="56" parent="13" name="email">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="57" parent="13" name="telephone">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="58" parent="13" name="introduce">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="59" parent="13" name="activeCode">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="60" parent="13" name="state">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="61" parent="13" name="role">
+      <Position>10</Position>
+      <DataType>varchar(10)|0</DataType>
+      <DefaultExpression>&apos;普通用户&apos;</DefaultExpression>
+    </column>
+    <column id="62" parent="13" name="registTime">
+      <Position>11</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="63" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

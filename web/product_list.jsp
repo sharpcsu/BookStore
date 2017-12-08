@@ -37,59 +37,24 @@
 								</div>
 								<table cellspacing="0" class="booklist">
 									<tr>
-										<td>
+										<c:forEach items="${ps}" var="p">
+											<td>
 
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/101.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
+												<div class="divbookpic">
+													<p>
+														<a href="${pageContext.request.contextPath}/findProductInfoServlet?id=${p.id}"><img src="${pageContext.request.contextPath}/bookcover/${p.imgurl}" width="115"
+																						height="129" border="0" /> </a>
+													</p>
+												</div>
 
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-										<td>
-
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/102.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
-
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-										<td>
-
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/103.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
-
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-										<td>
-
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/104.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
-
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-
-
+												<div class="divlisttitle">
+													<a href="${pageContext.request.contextPath}/findProductInfoServlet?id=${p.id}">书名:${p.name}<br />售价:${p.price} </a>
+												</div></td>
+										</c:forEach>
 									</tr>
 								</table>
 
+								<%--
 								<table cellspacing="0" class="booklist">
 									<tr>
 										<td>
@@ -144,7 +109,7 @@
 
 									</tr>
 								</table>
-
+								--%>
 
 
 

@@ -46,6 +46,15 @@
         <servlet-name>ModifyUserServlet</servlet-name>
         <servlet-class>com.csu.bookstore.web.servlet.ModifyUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.csu.bookstore.web.servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FindProductBySearchServlet</servlet-name>
+        <servlet-class>com.csu.bookstore.web.servlet.FindProductBySearchServlet</servlet-class>
+    </servlet>
+    
     
     <!--==========================================================-->
     <servlet-mapping>
@@ -76,5 +85,14 @@
         <servlet-name>ModifyUserServlet</servlet-name>
         <url-pattern>/modifyUser</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindProductBySearchServlet</servlet-name>
+        <url-pattern>/findProductBySearch</url-pattern>
+    </servlet-mapping>
+    
     
 </web-app>

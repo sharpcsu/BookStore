@@ -36,7 +36,7 @@
 						</tr>
 						<tr>
 							<td class="listtd"><img src="images/miniicon.gif" width="9"
-								height="6" />&nbsp;&nbsp;&nbsp;&nbsp; <a href="#">用戶退出</a>
+								height="6" />&nbsp;&nbsp;&nbsp;&nbsp; <a href="${pageContext.request.contextPath}/logout">用戶退出</a>
 							</td>
 						</tr>
 					</table></td>

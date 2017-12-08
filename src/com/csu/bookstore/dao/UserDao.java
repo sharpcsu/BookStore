@@ -6,10 +6,11 @@ import com.csu.bookstore.util.C3P0Util;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
-import java.nio.channels.SelectableChannel;
 import java.sql.SQLException;
 
 /**
+ * 持久层
+ * 用户相关操作
  * Created by sharp on 2017/12/1 0001 - 23:47
  */
 public class UserDao {
