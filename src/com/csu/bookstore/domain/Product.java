@@ -7,13 +7,13 @@ package com.csu.bookstore.domain;
  */
 public class Product {
     
-    private String name;    //商品编号
-    private double price;    //名称
-    private String category;    //价格
-    private int pnum;    //分类
-    private String imgurl;    //数量
-    private String description;    //图片路径
-    private String id;    //描述
+    private String id; // 商品编号
+    private String name; // 名称
+    private double price; // 价格
+    private String category; // 分类
+    private int pnum; // 数量
+    private String imgurl; // 图片路径
+    private String description; // 描述
     
     public String getName() {
         return name;

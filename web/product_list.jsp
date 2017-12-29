@@ -37,7 +37,7 @@
 								</div>
 								<table cellspacing="0" class="booklist">
 									<tr>
-										<c:forEach items="${ps}" var="p">
+										<c:forEach items="${pb.products}" var="p">
 											<td>
 
 												<div class="divbookpic">
@@ -54,91 +54,16 @@
 									</tr>
 								</table>
 
-								<%--
-								<table cellspacing="0" class="booklist">
-									<tr>
-										<td>
-
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/101.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
-
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-										<td>
-
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/102.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
-
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-										<td>
-
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/103.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
-
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-										<td>
-
-											<div class="divbookpic">
-												<p>
-													<a href="product_info.jsp"><img src="bookcover/104.jpg" width="115"
-														height="129" border="0" /> </a>
-												</p>
-											</div>
-
-											<div class="divlisttitle">
-												<a href="product_info.jsp">书名:xxx<br />售价:xxx </a>
-											</div></td>
-
-
-									</tr>
-								</table>
-								--%>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 								<div class="pagination">
 									<ul>
 
 
-										<li class="disablepage">上一页 &lt;&lt;</li>
-										<li class="currentpage">1</li>
-										<li><a href="product_info.jsp">2</a>
-										</li>
-										<li><a href="product_info.jsp">3</a>
-										</li>
-										<li><a href="product_info.jsp">4</a>
-										</li>
+										<li class="disablepage"><a href="${pageContext.request.contextPath}/pageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=${pb.category}">上一页 &lt;&lt;</a></li>
 
+										<li>第${pb.currentPage}页/共${pb.totalPage}页</li>
 
-										<li class="nextpage"><a href="product_info.jsp">下一页&gt;&gt;</a>
+										<li class="nextpage"><a href="${pageContext.request.contextPath}/pageServlet?currentPage=${pb.currentPage==pb.totalPage?pb.totalPage:pb.currentPage+1}&category=${pb.category}">下一页&gt;&gt;</a>
 										</li>
 
 									</ul>

@@ -8,12 +8,12 @@ import java.util.List;
  */
 public class PageBean {
     
-    private int totalCount;  //当前页码
-    private int totalPage;  //总条数
-    private int currentCount;  //总页数
-    private List<Product> ps;  //每页条数
-    private String category;  //每页显示的数据
-    private int currentPage;  //分类
+    private int currentPage;// 当前页码
+    private int count;// 总条数
+    private int totalPage;// 总页数
+    private int pageSize;// 每页条数
+    private List<Product> products;// 每页显示的数据
+    private String category; //分类
     
     public int getCurrentPage() {
         return currentPage;
@@ -23,12 +23,12 @@ public class PageBean {
         this.currentPage = currentPage;
     }
     
-    public int getTotalCount() {
-        return totalCount;
+    public int getCount() {
+        return count;
     }
     
-    public void setTotalCount(int totalCount) {
-        this.totalCount = totalCount;
+    public void setCount(int count) {
+        this.count = count;
     }
     
     public int getTotalPage() {
@@ -39,20 +39,20 @@ public class PageBean {
         this.totalPage = totalPage;
     }
     
-    public int getCurrentCount() {
-        return currentCount;
+    public int getPageSize() {
+        return pageSize;
     }
     
-    public void setCurrentCount(int currentCount) {
-        this.currentCount = currentCount;
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
     }
     
-    public List<Product> getPs() {
-        return ps;
+    public List<Product> getProducts() {
+        return products;
     }
     
-    public void setPs(List<Product> ps) {
-        this.ps = ps;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
     
     public String getCategory() {

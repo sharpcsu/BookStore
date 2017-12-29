@@ -54,6 +54,14 @@
         <servlet-name>FindProductBySearchServlet</servlet-name>
         <servlet-class>com.csu.bookstore.web.servlet.FindProductBySearchServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FindProductInfoServlet</servlet-name>
+        <servlet-class>com.csu.bookstore.web.servlet.FindProductInfoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PageServlet</servlet-name>
+        <servlet-class>com.csu.bookstore.web.servlet.PageServlet</servlet-class>
+    </servlet>
     
     
     <!--==========================================================-->
@@ -92,6 +100,14 @@
     <servlet-mapping>
         <servlet-name>FindProductBySearchServlet</servlet-name>
         <url-pattern>/findProductBySearch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindProductInfoServlet</servlet-name>
+        <url-pattern>/findProductInfoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PageServlet</servlet-name>
+        <url-pattern>/pageServlet</url-pattern>
     </servlet-mapping>
     
     

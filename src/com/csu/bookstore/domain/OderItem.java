@@ -6,9 +6,9 @@ package com.csu.bookstore.domain;
  */
 public class OderItem {
     
-    private Product p;  //订单
-    private int buynum;  //商品
-    private Order order;  //购物数量
+    private Order order;//订单
+    private Product p; //商品
+    private int buynum; //购物数量
     
     public Order getOrder() {
         return order;

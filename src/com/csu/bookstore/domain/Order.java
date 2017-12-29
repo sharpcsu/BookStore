@@ -8,13 +8,13 @@ import java.util.Date;
  */
 public class Order {
     
-    private double money;    //订单编号
-    private String receiverAddress;    //订单总价
-    private String receiverName;    //送货地址
-    private String receiverPhone;    //收货人姓名
-    private int paystate;    //收货人电话
-    private Date ordertime;    //订单状态
-    private String id;    //下单时间
+    private String id; // 订单编号
+    private double money; // 订单总价
+    private String receiverAddress; // 送货地址
+    private String receiverName; // 收货人姓名
+    private String receiverPhone; // 收货人电话
+    private int paystate; // 订单状态
+    private Date ordertime; // 下单时间
     
     public String getId() {
         return id;
